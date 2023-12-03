@@ -12,8 +12,6 @@ import psycopg2
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 import pandas
 
-
-# Define your Python function to be executed as a task
 def print_hello():
     return "Hello, Airflow!"
 
@@ -76,9 +74,6 @@ def insert_into_db(**kwargs):
         conn.close()
 
 
-    # Add Insertion logic here
-
-# Define the default_args dictionary for your DAG
 default_args = {
     'owner': 'yoda45',
     'start_date': datetime(2023, 1, 1),
